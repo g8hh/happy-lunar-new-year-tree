@@ -655,7 +655,7 @@ addLayer("n", {
                 case 2:return n(64)
                 case 3:return n(256)
               }
-              return n(1.797e308)
+              return n('ee308)
             },
             effect(x = getBuyableAmount(this.layer,this.id)) { return x.add(4) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
