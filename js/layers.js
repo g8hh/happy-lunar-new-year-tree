@@ -55,7 +55,7 @@ addLayer("m", {
         cost:n(1),
       },
       12:{
-        title:'Lunar - Touhou Lunar Night',
+        title:'Lunar - Touhou Luna Night',
         description:'解锁东方月神夜(?',
         cost:n(2),
         unlocked(){return hasUpgrade('m',11)},
