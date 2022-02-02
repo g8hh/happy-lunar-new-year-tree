@@ -514,7 +514,7 @@ function getNews(){var news = [
     {id:6,txt:`反物质魔方,不要九块八,只要九块九毛八!.`},
     {id:7,txt:`研究表明,快乐的时光总是短暂的.`},
   ]
-  var searchNum = buyableEffect('n',21).toNumber()-4
+  var searchNum = Math.min(buyableEffect('n',21).toNumber()-4,4)
   for(i=0;i<searchNum;i++){
     news.push(searchNews[i])
   }
@@ -655,7 +655,7 @@ addLayer("n", {
                 case 2:return n(64)
                 case 3:return n(256)
               }
-              return n('ee308)
+              return n('ee308')
             },
             effect(x = getBuyableAmount(this.layer,this.id)) { return x.add(4) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
